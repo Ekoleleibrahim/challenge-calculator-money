@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-color: rgba(112, 162, 255, 0.118);
+    --color1: #222f3e;
+    --color2: #f6e58d;
+    --color3:#C4E538;
+    --color4: #f6e58d61;
+}
+
+body{
+    background-color: var(--body-color);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.clear,
+input,
+button,
+.type1,
+.type2{
+    cursor: grabbing;
+}
+.clear{
+    text-decoration: underline;
+    color: var(--color1);
+}
+
+h1{
+    font-size: 20px;
+}
+
+.container-app{
+    width: 60%;
+    
+}
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    height: 44.5px;
+    background-color: #bde0fed3;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    left: 0.5px;
+    top: 1px;
+    border-radius: 4px 0 0 4px;
+}
+.right{
+    right: 0.5px;
+    top: 0.5px;
+    border-radius: 0 4px 4px 0;
+}
+
+.container-princ{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.container-princ div.item1{
+    padding: 40px 30px;
+    flex-shrink: 0;
+    flex: 3;
+}
+.container-princ div.item2{
+    background-color: var(--color1);
+    padding: 40px;
+    flex: 2;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 100px;
+
+}
+.container-princ div.item2 h1{
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.container-princ div.item2 img{
+    width: 150px;
+    height: 150px;
+}
+.container-princ div.item2 p{
+    color: rgba(220, 220, 220, 0.711);
+    text-align: center;
+    line-height: 25px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-item1{
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.amount{
+    gap: 10px;
+}
+.type1,
+.type2{
+    width: 100%;
+    gap: 5px;
+    padding: 10px;
+    border: 1px solid var(--color1);
+    border-radius: 4px;
+    font-weight: bold;
+}
+.type1:has(:checked),
+.type2:has(:checked){
+    accent-color: var(--color4);
+    background-color: var(--color4);
+    border: 1px solid var(--color2);
+}
+.label-type{
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    margin: 10px 0;
+}
+
+.label-type label{
+    margin: 0;
+    color: black;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    color: var(--color1);
+}
+span{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#amount{
+    padding-left: 43px;
+}
+
+input[type="radio"]{
+    display: inline-block;
+    width: auto;
+}
+
+input[type='number']:focus{
+    border: 1px solid var(--color2);
+    outline: none;
+}
+input[type='number']::placeholder{
+    color: black;
+}
+
+.container-btn{
+    margin-top: 20px;
+}
+
+button{
+    background-color:var(--color3);
+	border-radius:28px;
+	border:1px solid var(--color3);
+	display:inline-flex;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:17px;
+	padding:12px 31px;
+    font-weight: bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px var(--color3);
+}
+
+button:focus{
+    outline: 2px solid black;
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    body{
+        padding: 0;
+        display: flex;
+        align-items: start;
+        height: auto;
+    }
+    .right{
+        right: 0.5px;
+        top: 1px;
+        border-radius: 0 4px 4px 0;
+    }
+    .amount{
+        display: block;
+    }
+    .container-app{
+        width: 100%;
+    }
+    .container-princ{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 0;
+    }
+    .container-app div.item2{
+        border-radius: 0;
+    }
+    button{
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+}
